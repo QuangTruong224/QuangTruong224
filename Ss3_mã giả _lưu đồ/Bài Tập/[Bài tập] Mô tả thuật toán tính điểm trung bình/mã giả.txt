@@ -1,0 +1,5 @@
+Begin
+Input Mark of Math,Physics and Chemistry
+      Average = (Math + Physics + Chemistry) / 3
+   Display Average
+End .

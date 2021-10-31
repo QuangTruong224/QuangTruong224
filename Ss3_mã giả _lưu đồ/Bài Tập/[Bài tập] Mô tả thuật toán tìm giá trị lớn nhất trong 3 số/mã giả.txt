@@ -1,0 +1,11 @@
+Begin
+ Input A, B, C
+       A= Max
+  If B> Max 
+   Display B
+  End If.
+  If C > Max
+   Display C
+  Esle Diplay Max 
+  End If .
+End .

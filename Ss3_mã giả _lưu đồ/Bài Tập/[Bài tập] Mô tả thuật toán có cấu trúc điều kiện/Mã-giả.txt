@@ -1,0 +1,13 @@
+Begin 
+    Input d
+    If d >= 75 
+       Display xep loai A
+    else if 65 <= d < 75
+       Display xep loai B
+    else if 45 <= d < 60 
+       Display xep loai C
+    else if 35 <= d < 45 
+       Display xep loai D
+    else 
+       Display xep loai E
+End. 

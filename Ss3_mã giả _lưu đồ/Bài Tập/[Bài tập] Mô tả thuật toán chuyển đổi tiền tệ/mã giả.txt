@@ -1,0 +1,5 @@
+Begin
+ Input M (usd)
+    N=23000*M
+ Display N
+End. 

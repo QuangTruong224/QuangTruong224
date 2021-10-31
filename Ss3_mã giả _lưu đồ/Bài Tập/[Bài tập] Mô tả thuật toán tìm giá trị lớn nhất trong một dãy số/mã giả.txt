@@ -1,0 +1,16 @@
+BEGIN
+	INPUT N
+	M = 1
+	WHILE M<N
+	DO
+		INPUT N(M)
+		M = M+1
+	M = 2
+	MAX = N(1)
+	WHILE M<N
+	DO
+		IF MAX < N(M) THEN
+			MAX = N(M)
+		M = M+1
+	DISPLAY MAX
+END
