@@ -1,96 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
-    <title>Chuyển Đổi Tiền Tệ</title>
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
 </head>
 <body>
-<form>
-    <h1 style="text-align: center; width: 50%">Chuyển Đổi Tiền Tệ</h1>
-    <table style="width:50%;text-align: center">
+<table border="1">
+    <tr>
+        <td>
+            Amount
+        </td>
+        <td>
+            From Currency
+        </td>
+        <td>
+            To Currency
+        </td>
+    </tr>
+    <tr>
+        <td><input type="text" value=" " name="amount" id="amount"></td>
+        <td>
+            <select id="from">
+                <option name="FrCurrency" value="VietNam" >VietNam</option>
+                <option name="FrCurrency" value="USD" >USA</option>
+            </select>
+        </td>
+        <td>
+            <select id="to">
+                <option name="ToCurrency" value="USD" >USA</option>
+                <option name="ToCurrency" value="VietNam" >VietNam</option>
+            </select>
+        </td>
         <tr>
-            <th><b>Amount</b></th><br>
-            <th><b>From Currency</b></th>
-            <th><b>To Currency</b></th>
-
+        <td colspan="3"><input type="button" name="Convert" value="Convert" id="Covert" onclick="result.value =ChuyenDoi()"></td>
         </tr>
-        <tr>
-            <td>
-                <input onkeydown="changeText(this)" type="text" id="t1">
-            </td>
-            <td>
-                <select onchange="myFunction(this)" style="width:110px" id="a" >
-                    <option name="range" value="vnd">VND</option>
-                    <option name="range" value="usd">USD</option>
-                </select>
-            </td>
-            <td>
-                <select style="width:110px" id="b">
-                    <option name="range" value="usd">USD</option>
-                    <option name="range" value="vnd">VND</option>
-                </select>
-            </td>
-            <td>
-                <button type="button" onclick="showMessage()">covert </button>
-            </td>
-        </tr>
-    </table>
-    Result: <p id ='re'></p>
-    <script>
-        // function changeText(object) {
-        //     let n= document.getElementById('t1').value;
-        //     document.getElementById('re').innerText=n;
-        // }
-        function myFunction(object) {
-            let n= document.getElementById('t1').value;
-            let a= document.getElementById('a'). value;
-            let b= document.getElementById('b'). value;
-
-            if(a=='vnd' && b=='usd'){
-                result = n/23000
-                document.getElementById('re').innerText=result;
-            } else if (a=='usd' && b=='vnd'){
-                result = n*23000
-                document.getElementById('re').innerText=result;
-            }
-            else if (a=='vnd' && b=='vnd' ){
-                result = n*1
-                document.getElementById('re').innerText=result;
-            }
-            else {
-                result = n * 1
-                document.getElementById('re').innerText = result;
-            }
-
-
+    <tr>
+        <td>Result</td>
+        <td colspan="2"> <input type="text" name="Result" value="" id="result"></td>
+    </tr>
+</table>
+<script>
+    function ChuyenDoi() {
+        let a = parseInt(document.getElementById("amount").value);
+        let b = document.getElementById("from");
+        let c = document.getElementById("to");
+        let Tranfer;
+        if( b.value == "USD" && c.value == "VietNam"){
+            Tranfer = a*23000
+        }else if (b.value == "VietNam" && c.value == "USD"){
+            Tranfer = a/23000
         }
-        // function showMessage(){
-        // let n= document.getElementById('t1').value;
-        // let a= document.getElementById('a'). value;
-        // let b= document.getElementById('b'). value;
-        //
-        // if(a=='vnd' && b=='usd'){
-        //     result = n/23000
-        //     document.getElementById('re').innerText=result;
-        // } else if (a=='usd' && b=='vnd'){
-        //     result = n*23000
-        //    document.getElementById('re').innerText=result;
-        // }
-        // else if (a=='vnd' && b=='vnd' ){
-        //     result = n*1
-        //     document.getElementById('re').innerText=result;
-        // }
-        // else {
-        //     result = n*1
-        //     document.getElementById('re').innerText=result;
-        //
-        // }
-        //
-        // }
-
-    </script>
-
-</form>
+        return Tranfer;
+    }
+</script>
 </body>
 </html>
