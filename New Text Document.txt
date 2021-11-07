@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div >
+    <h1 style="text-align: center;width: 50%;background-color: red;color: white;">S? THÍCH C?A B?N <span
+            style="color: white"></span></h1>
+    <form>
+        <table>
+            <tr>
+                <td style="text-align: right;color: blue"><b>H? và tên</b></td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td style="text-align: right; color: blue"><b>Email</b></td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;color: blue"><b>S? thích</b></td>
+                <td style="color: orange">
+                    <input type="checkbox" value="Th? thao">Th? thao
+                    <input type="checkbox" value="Âm nh?c">Âm nh?c
+                    <input type="checkbox" value="Ð?c Sách">Ð?c Sách
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="color: orange">
+                    <input type="checkbox" value="Lu?t wed">Lu?t wed
+                    <input type="checkbox" value="Choi game">Choi game
+                    <input type="checkbox" value="Ði?n ?nh">Ði?n ?nh</td>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="color: orange">
+                    <input type="checkbox" value="Du l?ch">Du l?ch
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="G?i thông tin">
+
+                    <input type="reset" value="Nh?p l?i"/>
+
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+
+</body>
+</html>
