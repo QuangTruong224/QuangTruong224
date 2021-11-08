@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 10</title>
+</head>
+<body>
+    <script>
+        let Sodiensudung = parseInt(prompt("Nhập số điện bạn sử dụng:"))
+        let tamtinh;
+        if ( Sodiensudung > 0 && Sodiensudung <= 50){
+            tamtinh = Sodiensudung*1678
+            thanhTien = (tamtinh + tamtinh/10)
+            alert("Thành tiền: " +thanhTien)
+        }else if(Sodiensudung > 50 && Sodiensudung <= 100){
+            tamtinh = Sodiensudung*1734
+            thanhTien = (tamtinh + tamtinh/10)
+            alert("Thành tiền: " +thanhTien)
+        }else if(Sodiensudung> 100 && Sodiensudung <= 200){
+            tamtinh = Sodiensudung*2014
+            thanhTien = (tamtinh + tamtinh/10)
+            alert("Thành tiền: " +thanhTien)
+        }else if(Sodiensudung > 200 && Sodiensudung <= 300){
+            tamtinh = Sodiensudung*2536
+            thanhTien = (tamtinh + tamtinh/10)
+            alert("Thành tiền: " +thanhTien)
+        }else if(Sodiensudung > 300 && Sodiensudung <= 400){
+            tamtinh = Sodiensudung*2834
+            thanhTien = (tamtinh + tamtinh/10)
+            alert("Thành tiền: " +thanhTien)
+        }else{
+            tamtinh = Sodiensudung*2927
+            thanhTien = (tamtinh + tamtinh/10)
+            alert("Thành tiền: " +thanhTien)
+        }
+    </script>
+</body>
+</html>

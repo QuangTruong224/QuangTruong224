@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+    <script>
+        let a = prompt("Nhập A:")
+        let b = prompt("Nhập B:")
+        if( a == 0 && b == 0){
+            alert("Phương trình vô số nghiệm")
+        }else if(a == 0 && b > 0 || b < 0){
+            alert("Phương trình vô nghiệm!!")
+        }else if(Number.isFinite(a) == true && Number.isFinite(b) == true){
+            let x = (-b) / a
+            alert("Phương trình có một nghiệm duy nhất: "+x)
+        }else{
+            alert("Wrong input !! Please input again!!!")
+        }
+    </script>
+</body>
+</html>

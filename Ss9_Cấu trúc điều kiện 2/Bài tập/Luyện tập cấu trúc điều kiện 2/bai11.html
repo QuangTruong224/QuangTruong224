@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11</title>
+</head>
+
+<body>
+    <script>
+        let Lương = prompt("Nhập tiền lương của bạn");
+        let b = ("thuế cá nhân");
+        if (Lương > 84) {
+            let b = 0.35 * Lương
+            alert("Thuế thu nhập cá nhân là :" + b);
+
+        } else if (Lương < 84) {
+            b = 0.3 * Lương
+            alert("Thuế thu nhập cá nhân là :" + b);
+        } else if (Lương < 44) {
+            b = 0.25 * Lương
+            alert("Thuế thu nhập cá nhân là :" + b);
+        } else if (Lương < 24) {
+            b = 0.2 * Lương
+            alert("Thuế thu nhập cá nhân là:" + b);
+        } else if (Lương < 14) {
+            b = 0.15 * Lương
+            alert("Thuế thu nhập cá nhân là:" + b)
+        } else if (Lương < 9) {
+            b = 0.1 * Lương
+            alert("Thuế thu nhập cá nhân là:" + b)
+        } else {
+            b = 0.05 * Lương
+            alert("Thuế thu nhập cá nhân là:" + b);
+        }
+    </script>
+</body>
+
+</html>

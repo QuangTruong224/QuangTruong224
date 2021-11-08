@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Bài 5</title>
+</head>
+<body>
+    <script>
+        let dailyTest =  parseInt(prompt("Nhập điểm kiểm tra :"))
+        let midTest =  parseInt(prompt("Nhập điểm kiểm tra giữa kì :"))
+        let finalTest =  parseInt(prompt("Nhập điểm kiểm tra cuối kì :"))
+        mbi = (dailyTest + midTest*2 + finalTest*3)/(6)
+        if(mbi >=8.5 && mbi <=10){
+        alert("Học sinh giỏi")
+        }else if(mbi >=6.5 && mbi < 8.5){
+            alert("Khá")
+        }else if(mbi >= 5 && mbi < 6.5){
+            alert("Trung Bình")
+        }else(
+            alert("Yếu")
+        )
+        console.log (mbi)
+    </script>
+</body>
+</html>
