@@ -32,36 +32,36 @@
             
         </td> 
         <td>
-            <input type="text" value=" " id="KetQua" disabled>
+            <input type="text" value=" " id="ketqua" disabled>
         </td>    
     </tr>
     <tr>
         <td colspan="2" style="text-align: center;">
-            <input type="button" value="Xác Nhân" id="Confirm" onclick="KetQua.value = TinhSoNgay()" >
+            <input type="button" value="Xác Nhân" id="confirm" onclick="KetQua.value = TinhSoNgay()" >
         </td>    
     </tr>
    </table>
     <script>
         function TinhSoNgay(){
-            let Month = (parseInt(document.getElementById("Month").value));
-            let Year = (parseInt(document.getElementById("Year").value));
-            if(Month>=1 && Month <= 12){
-                switch(Month){
+            let month = (parseInt(document.getElementById("Month").value));
+            let year = (parseInt(document.getElementById("Year").value));
+            if(month>=1 && month <= 12){
+                switch(month){
                     case 4:
                     case 6:
                     case 9:
                     case 11:
-                        return " Tháng "+Month+" có 30 ngày";
+                        return " tháng "+month+" có 30 ngày";
                         break;
                     case 2:
-                        if((Year%4 == 0 && Year/100 != 0)||(Year%400 == 0)){
-                            return "Tháng "+Month+" Năm"+Year+" có 29 ngày";
+                        if((year%4 == 0 && year/100 != 0)||(year%400 == 0)){
+                            return "tháng "+month+" năm"+year+" có 29 ngày";
                         }else{
-                            return "Tháng"+Month+" Năm"+Year+" có 28 ngày";
+                            return "tháng"+month+" năm"+year+" có 28 ngày";
                         }
                         break;
                     default: 
-                    return "Tháng "+Month+" Năm " +Year+" có 31 ngày"
+                    return "tháng "+month+" năm " +year+" có 31 ngày"
                }
             }else{
                 return false;
