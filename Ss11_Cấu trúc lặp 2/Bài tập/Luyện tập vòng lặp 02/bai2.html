@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        let number = parseInt(prompt("nhập số giai thừa"))
+        let i;
+        let tich = 1;
+        if (number > 0) {
+
+            for (i = 1; i < number; i++) {
+
+                tich = i * tich;
+            }
+            document.write("giai thừa của 4 là:" + tich);
+        } else {
+            alert("nhập sai")
+            number = parseInt(prompt("nhập số giai thừa"))
+        }
+
+    </script>
+</body>
+
+</html>
