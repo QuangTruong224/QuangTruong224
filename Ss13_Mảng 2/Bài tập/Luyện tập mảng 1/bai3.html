@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        let number = [];
+        let i;
+        let nhap;
+
+        for (i = 0; i < 10;) {
+            nhap = prompt("nhập số nguyên: ");
+            if ((nhap > 0 || nhap <= 0) && parseInt(nhap) == nhap) {
+
+                number.push(nhap);
+                i++;
+
+            } else {
+                alert("nhập sai:");
+            }
+        }
+
+        let max = number[0];
+        let viTriMax;
+
+        for (i = 1; i < number.length; i++) {
+
+            if (number[i] >= max) {
+                max = number[i];
+                viTriMax = i;
+            }
+        }
+
+        let tongCacGiaTri = 0;
+        let giaTriTB;
+
+        for (i = 0; i < number.length; i++) {
+            tongCacGiaTri += number[i];
+        }
+        giaTriTB = tongCacGiaTri / 10;
+
+        document.write(number.join(","));
+        document.write("<br>");
+        document.write("số lớn nhất là " + max + "tại ví trí" + viTriMax + "<br>");
+        document.write("gia tri trung binh la" + giaTriTB);
+
+    </script>
+
+</body>
+
+</html>

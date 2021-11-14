@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <script>
+        let size = parseInt(prompt("Nhập vào số lượng phần tử của mảng"));
+        let array = [];
+        let x;
+
+        for (let i = 1; i < size; i++) {
+            x = prompt("nhập ký tự ");
+            array.push(x);
+        }
+
+        document.write(array.join("-") + "<br>");
+        document.write(array.reverse().join("-"));
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mangSoNguyenA = [];
+    let mangSoNguyenB = [];
+    let mangSoNguyenC = [];
+    let i;
+    let nhap;
+
+    for (i=0 ; i<10 ; ){
+        nhap = prompt("nhap so nguyen thu:" +(i+1) + "của mảng A" );
+        if ((nhap >0 || nhap <= 0)&&parseInt(nhap) == nhap){
+            mangSoNguyenA.push(nhap);
+            i++;
+        } else {
+            alert("nhập sai:");
+        }
+    }
+
+    for (i=0 ; i<10 ; ){
+        nhap = prompt("nhap so nguyen thu:" +(i+1) + "của mảng B" );
+        if ((nhap >0 || nhap <= 0)&&parseInt(nhap) == nhap){
+            mangSoNguyenB.push(nhap);
+            i++;
+        } else {
+            alert("nhập sai:");
+        }
+    }
+
+    for (i=0;i<10;i++){
+        mangSoNguyenC.push(mangSoNguyenA[i]);
+    }
+
+    for (i=0;i<10;i++){
+        mangSoNguyenC.push(mangSoNguyenB[i]);
+    }
+
+    document.write(mangSoNguyenC.join(""))
+
+
+</script>
+
+
+</body>
+</html>

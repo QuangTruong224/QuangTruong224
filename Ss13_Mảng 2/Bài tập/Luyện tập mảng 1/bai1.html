@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        let number = [];
+        let soLonHon10 = [];
+        let i;
+        let nhap;
+        for (i = 0; i < 10;) {
+            nhap = prompt("nhập số nguyên: ");
+            if ((nhap > 0 || nhap <= 0) && parseInt(nhap) == nhap) {
+                number.push(nhap);
+                i++;
+            } else {
+                alert("nhập sai:");
+            }
+        }
+
+        for (i = 0; i < number.length; i++) {
+            if (number[i] >= 10) {
+                soLonHon10.push(number[i]);
+            }
+        }
+
+        document.write(soLonHon10.join(","))
+    </script>
+
+
+</body>
+
+</html>

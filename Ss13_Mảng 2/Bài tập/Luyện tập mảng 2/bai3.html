@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+
+    <script>
+        let mangKyTu = [];
+        let kichThuoc;
+        let nhapDuLieu;
+
+
+        do {
+            kichThuoc = prompt("nhập độ dài của đoạn kí tự");
+            if ((kichThuoc > 0 && kichThuoc < 11 && kichThuoc == parseInt(kichThuoc))) {
+                break;
+            } else {
+                alert("nhập sai");
+            }
+        } while (!(kichThuoc > 0 && kichThuoc < 11 && kichThuoc == parseInt(kichThuoc)));
+
+        for (let i = 0; i < kichThuoc; i++) {
+            nhapDuLieu = prompt("xin nhập kí tự thứ :" + (i + 1));
+            mangKyTu.push(nhapDuLieu);
+        } alert("nhap xong");
+
+        let kyTuSo = [];
+        for (let j = 0; j < kichThuoc; j++) {
+            if (mangKyTu[j] < 0 || mangKyTu[j] >= 0) {
+                kyTuSo.push(mangKyTu[j]);
+            }
+        }
+
+        document.write("độ dài của mảng là " + kichThuoc + "<br>");
+        document.write('dữ liệu ban đàu ' + mangKyTu + "<br>");
+        document.write("ký tự số trong mảng là" + kyTuSo.join(";") + "<br>");
+        document.write("số kí tự số trong mảng là:" + kyTuSo.length);
+
+    </script>
+
+</body>
+
+</html>

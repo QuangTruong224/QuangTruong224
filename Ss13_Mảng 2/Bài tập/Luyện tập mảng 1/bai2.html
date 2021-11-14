@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <script>
+        let number = [];
+        let i;
+        let nhap;
+        let max;
+        let viTri;
+
+        for (i = 0; i < 10;) {
+            nhap = prompt("nhập số nguyên: ");
+            if ((nhap > 0 || nhap <= 0) && parseInt(nhap) == nhap) {
+
+                number.push(nhap);
+                i++;
+
+            } else {
+                alert("nhập sai:")
+            }
+        }
+
+        max = number[0];
+        for (i = 1; i < number.length; i++) {
+
+            if (number[i] >= max) {
+                max = number[i];
+                viTri = i;
+            }
+
+        }
+        document.write(number.join(","))
+        document.write("<br>")
+        document.write("số lớn nhất là " + max + "tại ví trí" + viTri)
+    </script>
+</body>
+
+</html>
