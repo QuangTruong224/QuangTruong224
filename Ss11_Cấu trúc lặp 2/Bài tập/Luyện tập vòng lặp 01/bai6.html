@@ -10,27 +10,17 @@
 
 
     <script>
-        let count = 0
-        let number = 1;
-        let tong = 0;
-        while (count < 30) {
-
-            if (number % 7 === 0) {
-
-                tong = tong + number;
-                count++;
-                document.write(number + "<br>");
-                number++;
-
-            } else {
-                number++;
-            }
-
-        }
-
-        console.log("tổng của 30 số tự nhiên chia hết cho 7 là :" + tong);
-
-
+        
+        let count = 0;
+let n=0;
+let sum= 0;
+while (count<30){
+     n=n+7
+     count++;
+        document.write(n+"<br>");
+        sum +=n
+    }
+document.write("Tổng của dãy "+count+"chữ số tự nhiên chia hết cho 7 đầu tiên là:" + sum)
     </script>
 
 </body>

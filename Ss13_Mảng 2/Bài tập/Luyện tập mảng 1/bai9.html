@@ -13,7 +13,7 @@
     let nhap;
 
     for (i=0 ; i<10 ; ){
-        nhap = prompt("nhap so nguyen thu:" +(i+1) + "của mảng A" );
+        nhap =parseInt (prompt("nhap so nguyen thu:" +(i+1) + "của mảng A" ));
         if ((nhap >0 || nhap <= 0)&&parseInt(nhap) == nhap){
             mangSoNguyenA.push(nhap);
             i++;
@@ -23,7 +23,7 @@
     }
 
     for (i=0 ; i<10 ; ){
-        nhap = prompt("nhap so nguyen thu:" +(i+1) + "của mảng B" );
+        nhap =parseInt (prompt("nhap so nguyen thu:" +(i+1) + "của mảng B" ));
         if ((nhap >0 || nhap <= 0)&&parseInt(nhap) == nhap){
             mangSoNguyenB.push(nhap);
             i++;

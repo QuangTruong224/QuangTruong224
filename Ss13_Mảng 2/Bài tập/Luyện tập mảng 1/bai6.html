@@ -13,7 +13,7 @@
         let nhap;
         for (i = 0; i < 10;) {
 
-            nhap = prompt("nhap so nguyen thu:" + (i+1));
+            nhap =parseInt (prompt("nhap so nguyen thu:" + (i+1)));
             if ((nhap > 0 || nhap <= 0) && parseInt(nhap) == nhap) {
                 number.push(nhap);
                 i++;
@@ -21,7 +21,7 @@
                 alert("nhập sai:")
             }
         }
-        let value = prompt("nhập số nguyên muốn tìm:");
+        let value =parseInt (prompt("nhập số nguyên muốn tìm:"));
         let check = false;
 
         for (i = 0; i < number.length; i++) {
