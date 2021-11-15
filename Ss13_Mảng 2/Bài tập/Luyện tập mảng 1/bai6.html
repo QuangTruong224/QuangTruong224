@@ -8,36 +8,53 @@
 
 <body>
     <script>
-        let number = [];
-        let i;
-        let nhap;
-        for (i = 0; i < 10;) {
+        // let number = [];
+        // let i;
+        // let nhap;
+        // for (i = 0; i < 10;) {
 
-            nhap =parseInt (prompt("nhap so nguyen thu:" + (i+1)));
-            if ((nhap > 0 || nhap <= 0) && parseInt(nhap) == nhap) {
-                number.push(nhap);
-                i++;
-            } else {
-                alert("nhập sai:")
-            }
-        }
-        let value =parseInt (prompt("nhập số nguyên muốn tìm:"));
-        let check = false;
+        //     nhap =parseInt (prompt("nhap so nguyen thu:" + (i+1)));
+        //     if ((nhap > 0 || nhap <= 0) && parseInt(nhap) == nhap) {
+        //         number.push(nhap);
+        //         i++;
+        //     } else {
+        //         alert("nhập sai:")
+        //     }
+        // }
+        // let value =parseInt (prompt("nhập số nguyên muốn tìm:"));
+        // let check = false;
 
-        for (i = 0; i < number.length; i++) {
-            if (value === number[i]) {
-                check = true;
-                break;
-            }
-        }
+        // for (i = 0; i < number.length; i++) {
+        //     if (value === number[i]) {
+        //         check = true;
+        //         break;
+        //     }
+        // }
 
-        document.write(number.join(",") + "<br>")
+        // document.write(number.join(",") + "<br>")
 
-        if (check === true) {
-            document.write("V is in array");
-        } else {
-            document.write("V is not in array");
-        }
+        // if (check === true) {
+        //     document.write("V is in array");
+        // } else {
+        //     document.write("V is not in array");
+        // }
+let numberV= parseInt(prompt("Nhập vào một số nguyên V:"));
+let number= new Array(10);
+for(let i = 0; i < number.length; i++) {
+    number[i] = parseInt(prompt("Nhập phân tử của mảng " + i));
+    console.log(number);
+}
+let result = " ";
+for (let i = 0 ; i < number.length; i++){
+    if (numberV == number[i]) {
+        result = "V is in number";
+        break;
+    }else {
+        result = "V is not in number";
+    }
+}
+document.write(result);
+
 
     </script>
 </body>

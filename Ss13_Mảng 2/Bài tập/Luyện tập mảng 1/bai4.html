@@ -9,21 +9,13 @@
 <body>
     <script>
 
-        let number = []
-        let i;
-        let nhap;
-
-        for (i = 0; i < 10;) {
-            nhap = parseInt(prompt("nhập số nguyên: "));
-            if ((nhap > 0 || nhap <= 0) && parseInt(nhap) == nhap) {
-                number.push(nhap);
-                i++;
-            } else {
-                alert("nhập sai:");
-            }
-        }
-
-        document.write(number.reverse().join("-"))
+      let a=[];
+let n= parseInt(prompt("Số lượng phần tử:"));
+for(let i = 0; i < n; i++) {
+    a[i] = parseInt(prompt("Nhập phân tử " + i));
+}
+    a.reverse();
+    console.log(a);
 
     </script>
 </body>

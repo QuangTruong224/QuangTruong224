@@ -8,25 +8,16 @@
 
 
 <script>
-    let number = [] ;
-    let i ;
-    let nhap;
-    for (i=0 ; i<10 ; ){
+    let array = new Array(5);
+for(let i = 0; i< array.length ; i++){
+    array[i] = prompt("Nhập phần tử thứ " + (i + 1));
+}
+alert("Mảng khi chưa sắp xếp: " + array);
+array.sort(function (a,b) {
+    return b- a
 
-        nhap =parseInt (prompt("nhap so nguyen thu:" +(i+1) ));
-        if ((nhap >0 || nhap <= 0)&&parseInt(nhap)== nhap){
-            number.push(nhap);
-            i++;
-        } else {
-            alert("nhập sai:")
-        }
-    }
-
-    document.write("các phần tử trước khi sắp xếp :"+number.join(";")+"<br>");
-
-    document.write("các phần tử sau khi sắp xếp:"+number.sort(function (a, b) {
-        return b-a
-    }));
+});
+alert("Mảng sau khi được sắp xếp giảm dần: " + array);
 </script>
 
 
