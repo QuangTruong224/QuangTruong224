@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+
+<body>
+    <script>
+        let numInput = parseInt(prompt("Nhập vào 1 số bất kì"));
+        function check(number) {
+            return number > 0 && number == parseInt(number);
+        }
+        while (numInput != parseInt(numInput))
+            numInput = parseInt(numInput);
+        alert(check(numInput));
+
+    </script>
+</body>
+
+</html>

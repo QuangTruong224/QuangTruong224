@@ -1,0 +1,38 @@
+bài 9
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        let array = [];
+        let doDai = prompt("Nhập vào độ dài :");
+        for (let i = 0; i < doDai; i++) {
+            array[i] = prompt("Nhập vào :");
+        }
+        let char =prompt("Nhập vào ki tự càn kiểm tra:");
+        kiemTra(array, char);
+        function kiemTra(arr, kiTu) {
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === kiTu) {
+                    count++;
+                }      
+            }
+            if (count > 0) {
+                    alert(count);
+                } else {
+                    alert(-1);
+                }
+        }
+      
+    </script>
+</body>
+
+</html>
