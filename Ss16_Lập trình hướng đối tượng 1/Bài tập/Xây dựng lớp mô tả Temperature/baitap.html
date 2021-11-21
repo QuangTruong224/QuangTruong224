@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        class Temperature {
+            constructor(c) {
+                if (c <= -273) {
+                    this.c = -273;
+                } else {
+                    this.c = c
+                }
+
+            }
+
+            DoF() {
+                return (this.c * 9 / 5) + 32;
+            }
+
+            DoK() {
+                return this.c + 273.15;
+            }
+
+        }
+
+        let Temperature2 = new Temperature(parseInt(prompt('Nhập nhiệt độ C :')));
+        alert(Temperature2.DoF());
+        alert(Temperature2.DoK());
+
+
+    </script>
+</body>
+
+</html>

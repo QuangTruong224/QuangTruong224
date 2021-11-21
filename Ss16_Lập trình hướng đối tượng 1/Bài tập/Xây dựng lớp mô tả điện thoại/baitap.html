@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Mobile {
+            constructor() {
+                this.pin = 100;
+                this.sent = [];
+                this.box = [];
+                this.status = true;
+            }
+
+            getStatus() {
+                return this.status;
+            }
+
+            setStatus() {
+                if (this.status) {
+                    let check = confirm("Do you want to turn off your phone?");
+                    if (check) {
+                        alert("it's off");
+                        this.status = false;
+                    }
+                } else {
+                    alert("it's on");
+                    this.status = true;
+                }
+            }
+
+            sendMessage(sent, iphone) {
+                this.sent.push(sent);
+                iphone.receiveMessage(sent);
+                this.pin--;
+            }
+
+            receiveMessage(box) {
+                this.box.push(box);
+                this.pin--;
+            }
+
+            checkPin() {
+                if (this.pin === 0) {
+                    alert("charge the battery");
+                }
+
+            }
+
+        }
+
+        let iphone = new Mobile();
+        let nokia = new Mobile();
+        iphone.checkPin();
+        iphone.getStatus();
+        iphone.setStatus();
+
+        nokia.sendMessage("Trường đẹp zai", iphone);
+
+        console.log("message sent : " + nokia.sent);
+        console.log("message received: " + iphone.box);
+  
+    </script>
+</body>
+
+</html>
